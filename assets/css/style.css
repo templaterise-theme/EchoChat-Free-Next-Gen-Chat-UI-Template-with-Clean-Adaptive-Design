@@ -3512,7 +3512,7 @@ body {
   top: 0;
   right: -400px;
   width: 400px;
-  height: 100vh;
+  height: 100%;
   background: white;
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
   z-index: 1001;
