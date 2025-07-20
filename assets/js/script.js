@@ -582,7 +582,7 @@ function updateSettingsUI() {
   const currentTheme = localStorage.getItem('theme') || 'light';
   el.themeToggleSetting.checked = currentTheme === 'dark';
   
-  const fontSize = localStorage.getItem('fontSize') || 'medium';
+  const fontSize = localStorage.getItem('fontSize') || 'large';
   el.fontSizeSelect.value = fontSize;
   document.body.classList.remove('font-small', 'font-medium', 'font-large');
   document.body.classList.add(`font-${fontSize}`);
