@@ -3580,9 +3580,9 @@ body {
 .settings-content {
   flex: 1;
   overflow-y: auto;
-  padding: 0;
   background: var(--bg-primary);
-  margin-bottom: 80px;
+  padding-bottom: 80px; /* Space for footer */
+  margin-bottom: 0; /* Remove previous margin */
 }
 
 .settings-section {
@@ -3784,7 +3784,7 @@ input:checked + .slider:before {
     url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g fill="%23e2e8f0" fill-opacity="0.4"><circle cx="3" cy="3" r="3"/></g></svg>');
 }
 
-.settings-footer {
+/* .settings-footer {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -3796,7 +3796,23 @@ input:checked + .slider:before {
   background: var(--bg-secondary);
   width: 100%;
   height: 80px;
+} */
+
+
+.settings-footer {
+  position: sticky; /* Changed from absolute to sticky */
+  bottom: 0;
+  left: 0;
+  padding: 20px 25px;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  z-index: 10; /* Ensure it stays on top */
 }
+
 
 .btn-reset,
 .btn-save {
@@ -4069,5 +4085,34 @@ input:checked + .slider:before {
 
   .chat-search-bar {
     margin-top: 80px;
+  }
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .settings-panel {
+    width: 100%; /* Full width on tablet/mobile */
+    right: -100%; /* Adjust for full width */
+  }
+  
+  .settings-panel.open {
+    right: 0;
+  }
+  
+  .settings-content {
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-footer {
+    flex-direction: column;
+  }
+  
+  .btn-reset, 
+  .btn-save {
+    width: 100%;
   }
 }
