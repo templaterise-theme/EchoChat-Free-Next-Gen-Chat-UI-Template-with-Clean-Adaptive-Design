@@ -4086,15 +4086,11 @@ input:checked + .slider:before {
   .chat-search-bar {
     margin-top: 80px;
   }
-}
 
-
-
-
-@media (max-width: 1024px) {
+  @media (max-width: 1024px) {
   .settings-panel {
-    width: 100%; /* Full width on tablet/mobile */
-    right: -100%; /* Adjust for full width */
+    width: 100%;
+    right: -100%;
   }
   
   .settings-panel.open {
@@ -4105,6 +4101,9 @@ input:checked + .slider:before {
     padding-bottom: 90px;
   }
 }
+
+}
+
 
 @media (max-width: 768px) {
   .settings-footer {
